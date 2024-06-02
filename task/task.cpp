@@ -78,6 +78,16 @@ public:
 
 int main()
 {
-    
+    figure* figures[6]{
+        new triangle(vector<point>{point(2,4),point(5,1),point(6,2)}),
+        new square(vector<point>{point(2,6),point(1,1),point(6,32),point(2,7)}),
+        new segment(vector<point>{point(4,6),point(11,2)}),
+        new pentagon(vector<point>{point(12,6),point(1,5),point(4,12),point(2,32),point(7,4)}),
+        new segment(vector<point>{point(1,5),point(7,5)}),
+        new square(vector<point>{point(2,1),point(2,15),point(6,32),point(24,72)})
+    };
+    for (auto el : figures) {
+        el->print();
+    }
 }
 
