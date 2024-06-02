@@ -21,10 +21,36 @@ public:
     figure(vector<point> points) {
         this->points = points;
     }
+    void print()const {
+        for (auto el : points) el.print();
+        cout << "\n\n";
+    }
 };
 
 int main()
 {
-    
+    figure square(vector<point>
+    {   point(2, 3),
+        point(3, 6),
+        point(3, 3),
+        point(2, 6)
+    });
+    figure triangle(vector<point>
+    {
+            point(3, 2),
+            point(6, 21),
+            point(1, 6)
+    });
+    figure pentagon(vector<point>
+    {
+            point(3, 7),
+            point(6, 11),
+            point(1, 6),
+            point(3, 5),
+            point(2, 7)
+    });
+    square.print();
+    triangle.print();
+    pentagon.print();
 }
 
