@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class point {
@@ -11,6 +12,14 @@ public:
     }
     void print()const {
         cout << "X: " << x << " , Y: " << y << "\n";
+    }
+};
+
+class figure {
+    vector<point> points;
+public:
+    figure(vector<point> points) {
+        this->points = points;
     }
 };
 
