@@ -21,7 +21,17 @@ public:
     figure(vector<point> points) {
         this->points = points;
     }
-    void print()const {
+    virtual void print()const = 0;
+};
+
+class triangle : public figure{
+    vector<point> points;
+public:
+    triangle(vector<point> points) : figure(points) {
+        this->points = points;
+    }
+    void print()const override{
+        cout << "\nTriangle\n";
         for (auto el : points) el.print();
         cout << "\n\n";
     }
@@ -29,28 +39,7 @@ public:
 
 int main()
 {
-    figure square(vector<point>
-    {   point(2, 3),
-        point(3, 6),
-        point(3, 3),
-        point(2, 6)
-    });
-    figure triangle(vector<point>
-    {
-            point(3, 2),
-            point(6, 21),
-            point(1, 6)
-    });
-    figure pentagon(vector<point>
-    {
-            point(3, 7),
-            point(6, 11),
-            point(1, 6),
-            point(3, 5),
-            point(2, 7)
-    });
-    square.print();
-    triangle.print();
-    pentagon.print();
+    triangle tr(vector<point>{point(2, 23), point(56, 2), point(6, 2)});
+    tr.print();
 }
 
