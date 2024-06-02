@@ -37,9 +37,47 @@ public:
     }
 };
 
+class segment : public figure {
+    vector<point> points;
+public:
+    segment(vector<point> points) : figure(points) {
+        this->points = points;
+    }
+    void print()const override {
+        cout << "\nSegment\n";
+        for (auto el : points) el.print();
+        cout << "\n\n";
+    }
+};
+
+class square : public figure {
+    vector<point> points;
+public:
+    square(vector<point> points) : figure(points) {
+        this->points = points;
+    }
+    void print()const override {
+        cout << "\nSquare\n";
+        for (auto el : points) el.print();
+        cout << "\n\n";
+    }
+};
+
+class pentagon : public figure {
+    vector<point> points;
+public:
+    pentagon(vector<point> points) : figure(points) {
+        this->points = points;
+    }
+    void print()const override {
+        cout << "\nPentagon\n";
+        for (auto el : points) el.print();
+        cout << "\n\n";
+    }
+};
+
 int main()
 {
-    triangle tr(vector<point>{point(2, 23), point(56, 2), point(6, 2)});
-    tr.print();
+    
 }
 
